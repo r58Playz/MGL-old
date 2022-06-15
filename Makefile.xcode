@@ -1,0 +1,6 @@
+
+build:
+	xcodebuild -target GLFW
+
+test:
+	xcodebuild -target test_mgl_glfw

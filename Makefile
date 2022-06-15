@@ -21,7 +21,7 @@ spirv_cross_1_2_include_path ?= SPIRV-Headers/include/spirv/1.2
 spirv_cross_config_include_path ?= SPIRV-Cross
 spirv_cross_lib_path ?= SPIRV-Cross/build
 
-glslang_path ?= glslang
+glslang_path ?= external/glslang
 glslang_include_path ?= $(glslang_path)/build/include/glslang $(glslang_path)/glslang/Include
 glslang_lib_path ?= $(glslang_path)/build/glslang $(glslang_path)/build/OGLCompilersDLL $(glslang_path)/build/glslang/OSDependent/Unix $(glslang_path)/build/StandAlone $(glslang_path)/build/SPIRV
 
@@ -156,7 +156,7 @@ install-pkgdeps:
 	git submodule init
 	git submodule update --depth 1
 	(cd SPIRV-Cross && mkdir -p build && cd build && cmake .. && make)
-	(cd glslang && mkdir -p build && cd build && cmake .. && make)
+	(cd external/glslang && mkdir -p build && cd build && cmake .. && make)
 
 update-pkdeps:
 	git submodule -q foreach git pull -q origin master
