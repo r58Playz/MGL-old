@@ -1,4 +1,5 @@
 # MGL
+# Check BUILD.MD for build instructions
 # OpenGL 4.6 on Metal
 
 This is a start for porting OpenGL 4.6 on top of Metal, most of it is functional and has been tested. The tests are functional, not coverage tests so they test the functionality of a path not all the possible permutations.
