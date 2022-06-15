@@ -2,5 +2,6 @@
 build:
 	xcodebuild -target GLFW
 
-test:
+test: build
 	xcodebuild -target test_mgl_glfw
+	DYLD_LIBRARY_PATH=build/Release/ ./build/Release/test_mgl_glfw
