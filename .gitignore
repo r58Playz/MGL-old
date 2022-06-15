@@ -2,6 +2,8 @@ config.mk
 build/
 libmgl.dylib
 
+MGL.xcodeproj/project.xcworkspace/xcuserdata/
+
 external/SPIRV-Cross
 external/SPIRV-Headers
 external/SPIRV-Tools
