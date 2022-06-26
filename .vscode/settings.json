@@ -1,0 +1,5 @@
+{
+    "makefile.extensionOutputFolder": "./.vscode",
+    "git.ignoreMissingGitWarning": false,
+    "git.repositoryScanMaxDepth": -1,
+}

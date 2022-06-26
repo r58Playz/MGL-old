@@ -32,11 +32,27 @@ extern void *getBufferData(GLMContext ctx, Buffer *ptr);
 
 GLuint textureIndexFromTarget(GLMContext ctx, GLenum target)
 {
+    /// target can be any of
+    /// GL_TEXTURE_2D
+    /// GL_PROXY_TEXTURE_2D
+    /// GL_TEXTURE_1D_ARRAY
+    /// GL_PROXY_TEXTURE_1D_ARRAY
+    /// GL_TEXTURE_RECTANGLE
+    /// GL_PROXY_TEXTURE_RECTANGLE
+    /// GL_TEXTURE_CUBE_MAP_POSITIVE_X
+    /// GL_TEXTURE_CUBE_MAP_NEGATIVE_X
+    /// GL_TEXTURE_CUBE_MAP_POSITIVE_Y
+    /// GL_TEXTURE_CUBE_MAP_NEGATIVE_Y
+    /// GL_TEXTURE_CUBE_MAP_POSITIVE_Z
+    /// GL_TEXTURE_CUBE_MAP_NEGATIVE_Z
+    /// GL_PROXY_TEXTURE_CUBE_MAP
     switch(target)
     {
         case GL_TEXTURE_BUFFER: return _TEXTURE_BUFFER_TARGET;
         case GL_TEXTURE_1D: return _TEXTURE_1D;
         case GL_TEXTURE_2D: return _TEXTURE_2D;
+        // FIXME: next line may break some stuff, but don't know
+        // case GL_PROXY_TEXTURE_2D: return _TEXTURE_2D;
         case GL_TEXTURE_3D: return _TEXTURE_3D;
         case GL_TEXTURE_RECTANGLE: return _TEXTURE_RECTANGLE;
         case GL_TEXTURE_1D_ARRAY: return _TEXTURE_1D_ARRAY;
@@ -48,6 +64,8 @@ GLuint textureIndexFromTarget(GLMContext ctx, GLenum target)
         case GL_RENDERBUFFER: return _RENDERBUFFER;
 
         default:
+            
+            fprintf(stdout, "textureIndexFromTarget: target = %u (unknown)", target);
             assert(0);
     }
 

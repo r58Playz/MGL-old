@@ -1,0 +1,8 @@
+/usr/bin/make run --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/toshitchawda/MGL2'
+xcodebuild -target GLFW
+xcodebuild -target test_mgl_glfw
+cd build/Release/
+./test_mgl_glfw
+make: Leaving directory `/Users/toshitchawda/MGL2'
+ 

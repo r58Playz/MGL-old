@@ -12,8 +12,6 @@
 
 #include "glm_context.h"
 
-#include "gl_core.h"
-
 void glCullFace(GLenum mode)
 {
     GLMContext ctx = GET_CONTEXT();

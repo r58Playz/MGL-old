@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9031F132866BD06007B94E7 /* test_mgl_glfw in CopyFiles */ = {isa = PBXBuildFile; fileRef = FFA83044276F9EBE003F1EA0 /* test_mgl_glfw */; };
+		C9031F202866CA09007B94E7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9031F1B2866C127007B94E7 /* main.cpp */; };
 		C939772C28538C9000B3EAE7 /* glcorearb.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C939772B28538C9000B3EAE7 /* glcorearb.h */; };
 		C939772E28538CC800B3EAE7 /* utils.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C939772D28538CC800B3EAE7 /* utils.h */; };
-		C939773028538E7400B3EAE7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C939772F28538E7400B3EAE7 /* main.cpp */; };
 		C9997E66285A5CF600AF4787 /* libGLFW.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF48101E2772B44D00BBF7C7 /* libGLFW.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		FF33414C278BDD2000FDBD91 /* Fixed_ResourceLimits.h in Headers */ = {isa = PBXBuildFile; fileRef = FF33414B278BDD2000FDBD91 /* Fixed_ResourceLimits.h */; };
 		FF480DC32772A60200BBF7C7 /* pch_source.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF480DAB2772A60200BBF7C7 /* pch_source.cpp */; };
@@ -350,20 +351,21 @@
 		};
 		FFA83042276F9EBE003F1EA0 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				C9031F132866BD06007B94E7 /* test_mgl_glfw in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C9031F1228668774007B94E7 /* gl_core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gl_core.h; sourceTree = "<group>"; };
+		C9031F1B2866C127007B94E7 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C939772B28538C9000B3EAE7 /* glcorearb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = glcorearb.h; path = MGL/include/GL/glcorearb.h; sourceTree = "<group>"; };
 		C939772D28538CC800B3EAE7 /* utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = utils.h; path = MGL/include/utils.h; sourceTree = "<group>"; };
-		C939772F28538E7400B3EAE7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = test_mgl/main.cpp; sourceTree = "<group>"; };
-		C93977312853911500B3EAE7 /* test_mgl */ = {isa = PBXFileReference; lastKnownFileType = folder; path = test_mgl; sourceTree = "<group>"; };
 		C9997E67285A613C00AF4787 /* test_mgl_glfw.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = test_mgl_glfw.entitlements; sourceTree = "<group>"; };
 		FF33414B278BDD2000FDBD91 /* Fixed_ResourceLimits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fixed_ResourceLimits.h; sourceTree = "<group>"; };
 		FF480DAB2772A60200BBF7C7 /* pch_source.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pch_source.cpp; path = "external/SPIRV-Tools/source/pch_source.cpp"; sourceTree = SOURCE_ROOT; };
@@ -680,6 +682,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C9031F1A2866C117007B94E7 /* test_mgl */ = {
+			isa = PBXGroup;
+			children = (
+				C9031F1B2866C127007B94E7 /* main.cpp */,
+			);
+			name = test_mgl;
+			sourceTree = "<group>";
+		};
 		FF480E712772A9A800BBF7C7 /* MachineIndependent */ = {
 			isa = PBXGroup;
 			children = (
@@ -961,6 +971,7 @@
 		FF7B7AB827728C3100C2028F /* include */ = {
 			isa = PBXGroup;
 			children = (
+				C9031F1228668774007B94E7 /* gl_core.h */,
 				FF33414B278BDD2000FDBD91 /* Fixed_ResourceLimits.h */,
 				FF7B7AB927728C3100C2028F /* error.h */,
 				FF7B7ABA27728C3100C2028F /* utils.h */,
@@ -1087,9 +1098,8 @@
 		FFA82FF7276F97DE003F1EA0 = {
 			isa = PBXGroup;
 			children = (
+				C9031F1A2866C117007B94E7 /* test_mgl */,
 				C9997E67285A613C00AF4787 /* test_mgl_glfw.entitlements */,
-				C93977312853911500B3EAE7 /* test_mgl */,
-				C939772F28538E7400B3EAE7 /* main.cpp */,
 				C939772D28538CC800B3EAE7 /* utils.h */,
 				C939772B28538C9000B3EAE7 /* glcorearb.h */,
 				FF86AEA92794DD0A00C51A88 /* README.md */,
@@ -1251,7 +1261,7 @@
 /* Begin PBXLegacyTarget section */
 		FF8F9165277E309800A1E546 /* SPIRV-Tools */ = {
 			isa = PBXLegacyTarget;
-			buildArgumentsString = "-j";
+			buildArgumentsString = "";
 			buildConfigurationList = FF8F9168277E309900A1E546 /* Build configuration list for PBXLegacyTarget "SPIRV-Tools" */;
 			buildPhases = (
 			);
@@ -1266,7 +1276,7 @@
 		};
 		FF8F9173277E30D500A1E546 /* SPIRV-Cross */ = {
 			isa = PBXLegacyTarget;
-			buildArgumentsString = "-j";
+			buildArgumentsString = "";
 			buildConfigurationList = FF8F9174277E30D500A1E546 /* Build configuration list for PBXLegacyTarget "SPIRV-Cross" */;
 			buildPhases = (
 			);
@@ -1281,7 +1291,7 @@
 		};
 		FF8F918A277E312E00A1E546 /* SPIRV-Headers */ = {
 			isa = PBXLegacyTarget;
-			buildArgumentsString = "-j";
+			buildArgumentsString = "";
 			buildConfigurationList = FF8F918B277E312E00A1E546 /* Build configuration list for PBXLegacyTarget "SPIRV-Headers" */;
 			buildPhases = (
 			);
@@ -1657,7 +1667,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C939773028538E7400B3EAE7 /* main.cpp in Sources */,
+				C9031F202866CA09007B94E7 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2106,7 +2116,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/MGL/include/";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/MGL/include/",
+					"$(SRCROOT)/glfw/include/",
+				);
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SYSTEM_HEADER_SEARCH_PATHS = /usr/local/include;
@@ -2122,7 +2135,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/MGL/include/";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/MGL/include/",
+					"$(SRCROOT)/glfw/include/",
+				);
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SYSTEM_HEADER_SEARCH_PATHS = /usr/local/include;
